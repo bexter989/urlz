@@ -8,7 +8,7 @@ let { nanoid } = require('nanoid')
 
 require('dotenv').config();
 
-let db = monk(process.env.MONGO_URI);
+let db = monk(process.env.MONGODB_URI);
 const urls = db.get('urls');
 
 urls.createIndex(
