@@ -60,12 +60,6 @@ app.post('/url', async (req, res, next) => {
         if (!slug){
             slug = nanoid(5);
         }
-        // else {
-        //     const existing = await urls.findOne({ slug });
-        //     if (existing) {
-        //         throw new Error('Slug in Use! :-(');
-        //     }
-        // }
         slug = slug.toLowerCase();
         const newUrl = {
             url,
