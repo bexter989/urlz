@@ -6,13 +6,97 @@
 
 html, body {
     height:100%;
+    width: 100%;
 }
 
 body {
+    color: #ccc;
     font-family: Verdana, sans-serif;
+    /* background-color: rgba(34,34,34,1); */
+    /* background: linear-gradient(to bottom, rgba(255,255,255,0.15) 0%, rgba(0,0,0,0.15) 100%), radial-gradient(at top center, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.40) 120%) #989898; */
+    /* background-blend-mode: multiply,multiply; */
+    /* background-image: linear-gradient(to right, #686868 0%, black 100%); */
+    background-image: linear-gradient(to right, #2c2c2c 0%, rgb(90, 90, 90) 270%);
+
 }
 
-header h1 {
-    margin: 1rem;
+h1,h2,h3,h4,h5,h6 {
+    font-family: Teko;
+    text-transform: uppercase;
+}
+
+#app {
+    width: 550px;
+    margin: 0 auto;
+}
+
+#app header a {
+    text-decoration: none;
+    color: #ccc;
+    width: 40px;
     text-align: center;
 }
+#app header h1 {
+    padding-top: 20px;
+    font-size: 3rem;
+}
+#app header a h1 small {
+    color: rgb(252, 156, 67);
+}
+
+#app form {
+    margin-top: 20%;
+}
+
+#app form .group {
+    margin-top: 10%;
+    width: 100%;
+    /* text-align: center; */
+}
+
+#app form .group input, button{
+    border: 2px solid #222;
+    width: 550px;
+    padding: 15px;
+    background-color: #ccc;
+    font-family: Teko;
+    font-size: 20px;
+    border-radius: 0 10px 10px 10px;
+    z-index: -9999;
+    box-shadow: inset 0 0 50px 0 #888;
+}
+#app form .group input:focus{
+    border-radius: 0 10px 10px 10px;
+    outline: none;
+    box-shadow: none;
+}
+button {
+    border-radius: 10px;
+    padding-top: 6px;
+    padding-bottom: 4px;
+    /* color: #ccc; */
+    color: rgb(252, 156, 67);
+    /* background-color:#444; */
+    background-image: linear-gradient(to right, #2c2c2c 0%, rgb(90, 90, 90) 90%);
+}
+
+#app form .group label {
+    z-index: 9999;
+    background-color:#444;
+    color: #ccc;
+    border-radius: 10px 10px 0 0;
+    padding: 5px 15px;
+    border-top: 2px solid #222;
+    border-right: 2px solid #222;
+    border-bottom: 2px solid white;
+    border-left: 2px solid #222;
+    font-family: Teko;
+    font-size: 20px;
+
+}
+
+#app code {
+    color: #ccc;
+    display: table-cell;
+}
+
