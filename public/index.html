@@ -4,13 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Urlz.sh</title>
-    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
+    <main id="app">
         <header>
-            <h1>Short Urlz test</h1>
+            <a href="/">
+                <h1>Urlz<small>.sh</small></h1>
+            </a>
         </header>
-    </div>
+
+        <form @submit.prevent="createUrl()">
+            <div class="group">
+                <label for="url">Url</label>
+                <input v-model="url" type="url" name="url" id="url" autocomplete="off" required>
+            </div>
+
+            <div class="group">
+                <label for="slug">Slug</label>
+                <input v-model="slug" type="text" name="slug" id="slug" autocomplete="off">
+            </div>
+
+            <div class="group">
+                <button type="submit">Shorten It!</button>
+            </div>
+        </form>
+        <code v-if='created'>
+            {{ JSON.stringify(created, null, 2) }}
+
+        </code>
+    </main>
+    <script src="vue.min.js"></script>
+    <script src="app.js"></script>
 </body>
 </html>
